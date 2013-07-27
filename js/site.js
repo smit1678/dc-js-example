@@ -208,22 +208,23 @@ rowChart.width(340)
  
 dataTable.width(800).height(800)
     .dimension(businessDimension)
-    .group(function(d) { return "List of all Selected Businesses"
-     })
+    .group(function(d) { return "List of all Restaurants"})
     .size(100)
     .columns([
         function(d) { return 'Restaurant ' + d.ClientID; },
         function(d) { return d.location; },
         function(d) { return d.q1; },
         function(d) { 
-            console.log(d);
             var overall = d.q1 + d.q2 + d.q3 + d.q4 + d.q5 + d.q6 + d.q7 + d.q8 + d.q9;
             return overall; },
         function(d) { return d.q10; }
     ])
-    .sortBy(function(d){ return d.q1; })
+    .sortBy(function(d){ 
+                var overall = d.q1 + d.q2 + d.q3 + d.q4 + d.q5 + d.q6 + d.q7 + d.q8 + d.q9;
+                return overall;
+            })
     // (optional) sort order, :default ascending
-    .order(d3.ascending);
+    .order(d3.descending);
 /********************************************************
 *                                                       *
 *   Step6:  Render the Charts                           *
