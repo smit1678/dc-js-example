@@ -15,26 +15,37 @@
 
     <div class='container' id='main-container'>
         <div class='content'>
-            <div class='container' style='font: 10px sans-serif;'>
-                <h2>DC.JS Test</h2>          
-                <div class='row-fluid'>
-                    <div class='remaining-graphs span8'>
-                        <div class='row-fluid'>
-                            <div class='bubble-graph span12' id='dc-bubble-graph'>
-                                <h4>Bubble Graph</h4>
+            <div class='container-fluid' style='font: 10px sans-serif;'>         	
+                <h2>DC.JS Test</h2>
+                <div class='row-fluid'>   
+				  <div class="span12">
+				    <div class="row-fluid">
+				      <div class="span4">
+
+							<div class='pie-graph' id='q1-pie-graph'>
+                                <h4>Q1 Scores Greater than 3</h4>
                             </div>
-                        </div>
-                        <div class='row-fluid'>
-                            <div class='pie-graph span4' id='dc-pie-graph'>
-                                <h4>Pie Chart</h4>
-                            </div>
-                            <div class='pie-graph span4' id='dc-volume-chart'>
-                                <h4>Bar Chart</h4>
-                            </div>
-                            <div class='pie-graph span4' id='dc-line-chart'>
-                                <h4>Line Graph</h4>
-                            </div>
-                        </div>
+                            <div class='pie-graph' id='q2-pie-graph'>
+                                <h4>Q2 Scores Greater than 3</h4>
+                            </div>       
+                            <div class='pie-graph' id='q3-pie-graph'>
+                                <h4>Q3 Scores Greater than 3</h4>
+                            </div>                                                 
+
+				      </div>
+				      <div class="span8">
+						<div class='bubble-graph' id='dc-bubble-graph'>
+							<h4>Average Overall Score by Neighborhood</h4>
+						</div>
+						<div class='line-chart' id='overall-line-chart'>
+							<h4>Overall Score by Day</h4>
+						</div>
+				      </div>
+				    </div>
+				  </div>
+				</div>                       
+
+				</div>
                         <!-- /other little graphs go here -->
                         <div class='row-fluid'>
                             <div class='span12 table-graph'>
@@ -51,9 +62,6 @@
                                 </table>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
  
         </div>
     </div>
